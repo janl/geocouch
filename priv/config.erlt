@@ -1,0 +1,5 @@
+{{"httpd_db_handlers", "_spatial_cleanup"}, "{couch_spatial_http, handle_cleanup_req}"}
+{{"httpd_design_handlers", "_spatial"}, "{couch_spatial_http, handle_spatial_req}"}
+{{"httpd_design_handlers", "_list"}, "{couch_spatial_list, handle_view_list_req}"}
+{{"httpd_design_handlers", "_info"}, "{couch_spatial_http, handle_info_req}"}
+{{"httpd_design_handlers", "_compact"}, "{couch_spatial_http, handle_compact_req}"}
