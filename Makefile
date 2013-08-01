@@ -1,4 +1,4 @@
-ERL=erl
+ERL=`couch-config --erl-bin`
 VERSION=$(shell git describe)
 # Output ERL_COMPILER_OPTIONS env variable
 COMPILER_OPTIONS=$(shell $(ERL) -noinput +B -eval 'Options = case os:getenv("ERL_COMPILER_OPTIONS") of false -> []; Else -> {ok,Tokens,_} = erl_scan:string(Else ++ "."),{ok,Term} = erl_parse:parse_term(Tokens), Term end, io:format("~p~n", [[{i, "${COUCH_SRC}"}] ++ Options]), halt(0).')
